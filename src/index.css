@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+
+
+@tailwind utilities;
+
+
+.nav_wrapper {}
+
+
+.container-nav {
+    background: rgba(211, 200, 200, 0.02);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.radial-gradient {
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(103, 45, 196, 0.288) 0%,
+        transparent 60%
+    ),rgb(68, 18, 150)
+}
+
+.linear-mask {
+    mask-image: linear-gradient(
+     -75deg,
+     white calc(var(--x) + 20%),
+     transparent calc(var(--x) + 30%),
+     white calc(var(--x) + 100%)
+    );
+    -webkit-mask-image: linear-gradient(
+        -75deg,
+        white calc(var(--x) + 20%),
+        transparent calc(var(--x) + 30%),
+        white calc(var(--x) + 100%)
+    );
+    padding: 10px;
+}
+
+.hover_li {
+    transition: color 1s ease, transform 1s ease;
+}
+
+.height_trans {
+    transition: height .5s ease-out;
+}
+
+
+
+.hover_li:hover {
+    color: rgb(68, 18, 150);
+}
+
+.moving_border {
+    animation: move-border 4s linear infinite;
+}
+
+@keyframes move-border {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 0 0px  rgb(68, 18, 150), 0 0 0 0px rgb(68, 18, 150), 0 0 0 2px rgb(68, 18, 150);
+    }
+    50% {
+        border-color: transparent;
+        box-shadow: 0 0 0 0px rgb(68, 18, 150), 0 0 0 0px rgb(68, 18, 150);
+    }
+    100% {
+        border-color: transparent;
+        box-shadow: 0 0 0 0px  rgb(68, 18, 150), 0 0 0 0px rgb(68, 18, 150), 0 0 0 2px rgb(68, 18, 150);
+    }
+}
+
+.text_animation300 {
+animation: slidein 1s forwards;
+animation-delay: .1s;
+}
+
+.text_animation500 {
+    animation-delay: .2s;
+    animation: slidein 1s forwards;
+}
+
+.text_animation700 {
+    animation-delay: .3s;
+    animation: slidein 1s forwards;
+}
+
+.text_animation800 {
+    animation: slidein 1s  forwards;
+    animation-delay: .4s;
+}
+
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+   100% {
+     opacity: 1;
+     transform: translateY(0);
+    }
+}
