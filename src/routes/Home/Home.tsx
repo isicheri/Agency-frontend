@@ -1,3 +1,4 @@
+import AboutComponent from "../../components/aboutComponent/About";
 import HeroCompnent from "../../components/Hero/Hero";
 import NavbarComponent from "../../components/navbar/Navbar";
 
@@ -5,9 +6,11 @@ import NavbarComponent from "../../components/navbar/Navbar";
 const Home = () => {
     return <>
      <div className="h-full w-full flex flex-col">
-        <div className="container-nav sticky top-0 z-10 w-[100%] h-[120px] flex justify-center items-center">
-            <NavbarComponent /></div>
-            <HeroCompnent />
+        <div className="relative z-50! w-full h-auto">
+      <NavbarComponent />
+        </div>
+      <HeroCompnent />
+      <AboutComponent />
      </div>
     </>
 }
